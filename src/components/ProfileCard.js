@@ -74,32 +74,25 @@ const SwiperComponent = () => {
   const renderItem = ({ item }) => (
     <TouchableOpacity onPress={() => handleCardPress(item)}>
       <View style={styles.card}>
-        <Image source={item.image} style={styles.cardImage} />
-        <View style={{ display: "flex", flexDirection: "row", marginTop: 24 }}>
-          <Text style={styles.cardTitle}>{item.title}</Text>
-          <Text style={styles.cardTime}>{item.time}</Text>
-        </View>
-
-        <View style={{ display: "flex", flexDirection: "row", marginTop: 24 }}>
-          <View style={{ display: "flex", flexDirection: "row" }}>
-            <Image source={item.userprofile} style={styles.cardProfile} />
-            <Text style={styles.cardUsername}>{item.username}</Text>
-          </View>
+        <View style={{ display: "flex", flexDirection: "row" }}>
+          <Image source={item.image} style={styles.cardImage} />
           <View
             style={{
               display: "flex",
-              flexDirection: "row",
-              marginLeft: 100,
-              borderWidth: 2,
-              borderColor: Colors.primary,
-              borderRadius: 10,
-              paddingHorizontal: 15,
+              flexDirection: "column",
+              marginTop: 12,
+              marginLeft: 12,
             }}
           >
-            <FontAwesome5 name="ethereum" size={20} color={Colors.gray} />
-            <Text style={styles.cardPrice}>{item.price}</Text>
-            <Text style={styles.cardEth}>ETH</Text>
+            <Text style={styles.cardUsername}>{item.username}</Text>
+            <Text style={styles.cardTitle}>{item.title}</Text>
           </View>
+        </View>
+
+        <View style={{ display: "flex", flexDirection: "row", marginTop: 24 }}>
+          <FontAwesome5 name="ethereum" size={20} color={Colors.gray} />
+          <Text style={styles.cardPrice}>{item.price}</Text>
+          <Text style={styles.cardEth}>ETH</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -124,17 +117,18 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 10,
     width: "80%",
-    height: 400,
+    height: "50%",
     backgroundColor: Colors.secondary,
     marginLeft: 44,
     marginTop: 20,
   },
   cardImage: {
-    width: "100%",
-    height: "70%",
+    width: 82,
+    height: 82,
+    borderRadius: 10,
   },
   cardTitle: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
     color: Colors.white,
   },
@@ -152,9 +146,7 @@ const styles = StyleSheet.create({
   cardUsername: {
     fontSize: 15,
     fontWeight: "bold",
-    color: Colors.white,
-    marginLeft: 8,
-    marginTop: 5,
+    color: Colors.gray,
   },
   cardPrice: {
     fontSize: 15,

@@ -12,6 +12,7 @@ import { SimpleLineIcons } from "@expo/vector-icons";
 import Colors from "../../components/Colors";
 import cover from "../../../assets/banner-photo.jpg";
 import img1 from "../../../assets/image10.png";
+import ProfileCard from "../../components/ProfileCard";
 
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
@@ -68,7 +69,7 @@ function Home({ navigation }) {
       <View
         style={{
           marginLeft: 30,
-          marginTop: 55,
+          marginTop: 25,
           display: "flex",
           flexDirection: "row",
           width: "100%",
@@ -97,7 +98,7 @@ function Home({ navigation }) {
       <View
         style={{
           marginLeft: 30,
-          marginTop: 55,
+          marginTop: 25,
           display: "flex",
           flexDirection: "row",
           width: "100%",
@@ -142,6 +143,10 @@ function Home({ navigation }) {
         >
           <Text style={{ color: Colors.gray, fontSize: 16 }}> Upload</Text>
         </TouchableOpacity>
+      </View>
+
+      <View style={{ marginTop: 10, height: "60%" }}>
+        <ProfileCard />
       </View>
     </SafeAreaView>
   );
