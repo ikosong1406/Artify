@@ -18,6 +18,10 @@ import BottomTabNavigator from "./src/components/BottomTabNavigator";
 import Editprofile from "./src/screens/main/editprofile";
 import Upload1 from "./src/screens/upload/upload1";
 import NftDetailsScreen from "./src/screens/nft/nftitem";
+import Bid from "./src/screens/nft/bid";
+import Bid2 from "./src/screens/nft/bidsfinish";
+import Upload2 from "./src/screens/upload/upload2";
+import Upload3 from "./src/screens/upload/upload3";
 
 const Stack = createStackNavigator();
 
@@ -98,8 +102,28 @@ const App = () => {
           options={{ animation: "slide_from_right" }}
         />
         <Stack.Screen
+          name="upload2"
+          component={Upload2}
+          options={{ animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="upload3"
+          component={Upload3}
+          options={{ animation: "slide_from_right" }}
+        />
+        <Stack.Screen
           name="nftdetails"
           component={NftDetailsScreen}
+          options={{ animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="bid"
+          component={Bid}
+          options={{ animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="bid2"
+          component={Bid2}
           options={{ animation: "slide_from_right" }}
         />
       </Stack.Navigator>

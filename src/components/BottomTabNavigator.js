@@ -2,11 +2,9 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Dimensions } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
-import { Ionicons } from "@expo/vector-icons";
+import { StatusBar } from "react-native";
 import Home from "../screens/main/home";
 import Search from "../screens/main/search";
-import Status from "../screens/main/stats";
 import Profile from "../screens/main/profile";
 import Colors from "./Colors";
 
@@ -33,7 +31,7 @@ function BottomTabNavigator() {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="home"
         component={Home}
         options={{
           tabBarLabel: "",
@@ -44,7 +42,7 @@ function BottomTabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Search"
+        name="search"
         component={Search}
         options={{
           tabBarLabel: "",
@@ -55,18 +53,7 @@ function BottomTabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Status"
-        component={Status}
-        options={{
-          tabBarLabel: "",
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="stats-chart" size={width * 0.08} color={color} />
-          ),
-          headerShown: false,
-        }}
-      />
-      <Tab.Screen
-        name="Profile"
+        name="profile"
         component={Profile}
         options={{
           tabBarLabel: "",

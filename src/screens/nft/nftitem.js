@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -6,16 +6,29 @@ import {
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
+  Modal,
 } from "react-native";
 import Colors from "../../components/Colors";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 
-const NftDetailsScreen = ({ route }) => {
+const NftDetailsScreen = ({ route, navigation }) => {
   const { selectedCard } = route.params;
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
+
+  const toggleClose = () => {
+    setModalVisible(false);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={selectedCard.image} style={styles.image} />
+      <TouchableOpacity onPress={toggleModal}>
+        <Image source={selectedCard.image} style={styles.image} />
+      </TouchableOpacity>
       <Text
         style={{
           color: Colors.white,
@@ -58,9 +71,7 @@ const NftDetailsScreen = ({ route }) => {
         }}
       >
         {" "}
-        Karafuru is home to 5,555 generative arts where colors reign supreme.
-        Leave the drab reality and enter the world of Karafuru by Museum of
-        Toys.
+        {selectedCard.description}
       </Text>
 
       <View
@@ -108,6 +119,9 @@ const NftDetailsScreen = ({ route }) => {
             borderRadius: 20,
             padding: 16,
           }}
+          onPress={() => {
+            navigation.navigate("bid", { selectedCard });
+          }}
         >
           <FontAwesome5 name="wallet" size={24} color={Colors.white} />
           <Text
@@ -122,6 +136,26 @@ const NftDetailsScreen = ({ route }) => {
           </Text>
         </TouchableOpacity>
       </View>
+
+      <Modal animationType="slide" transparent={true} visible={isModalVisible}>
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: Colors.dark,
+          }}
+        >
+          <TouchableOpacity
+            onPress={toggleClose}
+            style={{ marginLeft: 30, marginTop: 40 }}
+          >
+            <FontAwesome name="close" size={40} color={Colors.white} />
+          </TouchableOpacity>
+          <Image
+            source={selectedCard.image}
+            style={{ width: "100%", height: 400, marginTop: 130 }}
+          />
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };

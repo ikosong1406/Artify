@@ -16,7 +16,7 @@ const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
 const scaleFactor = width / 375;
 
-const Upload1 = () => {
+const Upload1 = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -117,7 +117,7 @@ const Upload1 = () => {
           marginLeft: 20,
           marginTop: 35,
         }}
-        onPress={() => navigation.navigate("upload1")}
+        onPress={() => navigation.navigate("upload2")}
       >
         <Text style={{ color: Colors.gray, fontSize: 16 }}> Next</Text>
       </TouchableOpacity>

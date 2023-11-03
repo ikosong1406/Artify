@@ -20,6 +20,8 @@ const SwiperComponent = () => {
       userprofile: require("../../assets/image2.jpg"),
       username: "Karafuru",
       price: "2,75 ",
+      description:
+        "Karafuru is home to 5,555 generative arts where colors reign supreme Leave the drab reality and enter the world of Karafuru by Museum of Toys",
     },
     {
       image: require("../../assets/image21.jpg"),
@@ -28,6 +30,8 @@ const SwiperComponent = () => {
       userprofile: require("../../assets/image2.jpg"),
       username: "Karafuru",
       price: "2,75 ",
+      description:
+        "Karafuru is home to 5,555 generative arts where colors reign supreme Leave the drab reality and enter the world of Karafuru by Museum of Toys",
     },
     {
       image: require("../../assets/image2.jpg"),
@@ -36,6 +40,8 @@ const SwiperComponent = () => {
       userprofile: require("../../assets/image2.jpg"),
       username: "Karafuru",
       price: "2,75 ",
+      description:
+        "Karafuru is home to 5,555 generative arts where colors reign supreme Leave the drab reality and enter the world of Karafuru by Museum of Toys",
     },
     {
       image: require("../../assets/image8.jpg"),
@@ -44,6 +50,8 @@ const SwiperComponent = () => {
       userprofile: require("../../assets/image2.jpg"),
       username: "Karafuru",
       price: "2,75 ",
+      description:
+        "Karafuru is home to 5,555 generative arts where colors reign supreme Leave the drab reality and enter the world of Karafuru by Museum of Toys",
     },
     {
       image: require("../../assets/image7.jpg"),
@@ -52,6 +60,8 @@ const SwiperComponent = () => {
       userprofile: require("../../assets/image2.jpg"),
       username: "Karafuru",
       price: "2,75 ",
+      description:
+        "Karafuru is home to 5,555 generative arts where colors reign supreme Leave the drab reality and enter the world of Karafuru by Museum of Toys",
     },
   ];
 
