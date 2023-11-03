@@ -22,6 +22,9 @@ import Bid from "./src/screens/nft/bid";
 import Bid2 from "./src/screens/nft/bidsfinish";
 import Upload2 from "./src/screens/upload/upload2";
 import Upload3 from "./src/screens/upload/upload3";
+import Sell1 from "./src/screens/sell/sell1";
+import Sell2 from "./src/screens/sell/sell2";
+import Sold from "./src/screens/sell/sold";
 
 const Stack = createStackNavigator();
 
@@ -124,6 +127,21 @@ const App = () => {
         <Stack.Screen
           name="bid2"
           component={Bid2}
+          options={{ animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="sell1"
+          component={Sell1}
+          options={{ animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="sell2"
+          component={Sell2}
+          options={{ animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          name="sold"
+          component={Sold}
           options={{ animation: "slide_from_right" }}
         />
       </Stack.Navigator>

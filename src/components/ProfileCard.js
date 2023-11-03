@@ -68,7 +68,7 @@ const SwiperComponent = () => {
   const navigation = useNavigation();
 
   const handleCardPress = (selectedCard) => {
-    navigation.navigate("nftdetails", { selectedCard });
+    navigation.navigate("sell1", { selectedCard });
   };
 
   const renderItem = ({ item }) => (
